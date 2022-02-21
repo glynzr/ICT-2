@@ -1,0 +1,21 @@
+#Max numbers(out of 3 integers) 1st method
+num1,num2,num3=map(int,input("Enter 3 integers").split(","))
+if num1>num2 and num1>num3:
+    print("max number is {}".format(num1))
+
+else:
+    if num2>num3:
+        print("max number is {}".format(num2))
+    else:
+        print("max number is {}".format(num3))
+    
+    
+#Max numbers(out of 3 integers) 2nd method
+num1,num2,num3=map(int,input("Enter 3 integers").split(","))
+if num1>num2 and num1>num3:
+    print("max number is {}".format(num1))
+elif num2>num3:
+    print("max number is {}".format(num2))
+else:
+    print("max number is {}".format(num3))
+

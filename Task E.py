@@ -1,0 +1,15 @@
+#Task E 
+import random,math
+a=int(input("a: "))
+b=int(input("b: "))
+x=random.randint(a,b)
+y=random.randint(a,b)
+print("x:{}".format(x))
+print("y:{}".format(y))
+print("x+y={}".format(x+y))
+print("{}-{}={}".format(x,y,x-y))
+print("x//y={}".format(x//y))
+print("x%y={}".format(x%y))
+print("x ustlu quvvet y-nin neticesi={}".format(y**x))
+print("x*y={}".format(x*y))
+print("log10(x)={}".format(round(math.log10(x),2)))

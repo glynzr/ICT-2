@@ -1,0 +1,12 @@
+#The oldest
+Asif,Bextiyar,Vasif=map(int,input("Asifin,Bextiyarin,Vasifin yasi: ").split(","))
+print("Asifin yasi:{}".format(Asif))
+print("Bextiyarin yasi:{}".format(Bextiyar))
+print("Vasifin yasi:{}".format(Vasif))
+oldest=Asif
+if oldest<Bextiyar:
+    oldest=Bextiyar
+if oldest<Vasif:
+    oldest=Vasif
+print("The oldest:{}".format(oldest))
+

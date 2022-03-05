@@ -1,0 +1,5 @@
+#4
+for x in range(5,11):
+    if x==7 or x==9:
+        continue
+    print(x)

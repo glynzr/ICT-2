@@ -1,0 +1,17 @@
+#slide 68 task b 1st method
+N=int(input("N: "))
+flag=True
+while N>0:
+    if (N%10)==(N//10)%10:
+        flag=False
+    N//=10
+print("Yes" if flag==False else "No")
+
+#2nd method
+a=input("a= ")
+flag=True
+for x in ["00","11","22","33","44","55","66","77","88","99"]:
+    if x in a:
+        flag=False
+print("Yes" if flag==False else "No")
+

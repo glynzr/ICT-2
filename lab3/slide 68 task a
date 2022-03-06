@@ -1,0 +1,8 @@
+#slide 68 task a
+N=int(input("N: "))
+su=0
+while N>0:
+    su+=(N%10)
+    N//=10
+print(su)
+    

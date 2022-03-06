@@ -1,0 +1,12 @@
+#slide 67 task C
+N=int(input("N: "))
+li=[1,1]
+while (li[-1]+li[-2])<N:
+    li+=[li[-1]+li[-2]]
+print(li)
+
+su=0
+for x in li:
+    su+=x
+print(su)
+    

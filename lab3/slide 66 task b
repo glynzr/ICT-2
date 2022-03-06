@@ -1,0 +1,17 @@
+#slide 66 Task B
+A,B=map(int,input("A,B: ").split(","))
+total=0
+i=1
+if (A>0 and B>0) or (A<0 and B<0):
+    while i<=abs(A):
+        total+=abs(B)
+        i+=1
+    print(total)
+elif (A<0 and B>0) or (A>0 and B<0):
+    while i<=abs(A):
+        total+=abs(B)
+        i+=1
+    print(-total)
+
+
+

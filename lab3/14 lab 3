@@ -1,0 +1,20 @@
+#10->2(14 lab3 method 1)
+n=int(input("Enter an integer: "))
+li=[]
+while n>0:
+    li+=[(n%2)]
+    n//=2
+a=li[::-1]
+print(a)
+print(*map(int,a))
+
+
+
+
+#2nd method
+n=int(input("n="))
+str_=""
+while n>0:
+    str_+=str(n%2)
+    n//=2
+print(str_[::-1])

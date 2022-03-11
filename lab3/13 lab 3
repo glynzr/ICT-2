@@ -1,0 +1,18 @@
+#13 lab 3(1st method) 2->10:
+while True:
+    flag=True
+    n=int(input("Enter: "))
+    for x in str(n):
+        if x not in ["0","1"]:
+            flag=False
+            break
+    if flag==True:
+        break
+y=0
+dec=0
+while n>0:
+    dec+=(n%10)*(2**y)
+    n//=10
+    y+=1
+print(dec)
+    

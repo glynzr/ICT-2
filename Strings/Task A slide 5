@@ -1,0 +1,16 @@
+#slide 5 Task A
+a=input("Enter: ")
+s=" "
+for x in range(len(a)):
+    if a[x]=="a":
+        s+="b"
+    elif a[x]=="A":
+        s+="B"
+    elif a[x]=="b":
+        s+="a"
+    elif a[x]=="B":
+        s+="A"
+    else:
+        s+=a[x]
+print(s)
+    

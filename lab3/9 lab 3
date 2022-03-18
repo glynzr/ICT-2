@@ -1,0 +1,15 @@
+#9 lab 3
+while True:
+    n=int(input("n= "))
+    if n>0:
+        break
+a=n
+str_1=" "
+while n>0:
+    str_1+=str(n%10)
+    n//=10
+print(str_1)
+if int(str_1)==a:
+    print("Polindrom eded")
+else:
+    print("No")

@@ -1,0 +1,24 @@
+#slide 19 Task C
+#1st method
+n="(X > 0) and (Y < X) and (Z > Y) and (Z <> 5)"
+a="" 
+b=n.split(" ")
+for x in b:
+    if x=="and":
+        x="&"
+    a+=x
+print(a)
+
+#2nd method
+#2nd method
+s1=input("Setri daxil edin: ")
+s2=input("Neyi evezleyirik: ")
+s3=input("Ne ile evezleyirik: ")
+b=s1.split(" ")
+a=" "
+for x in b:
+    if x==s2:
+        x=s3
+    a+=x
+print(a)
+

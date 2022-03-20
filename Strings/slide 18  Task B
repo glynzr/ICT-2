@@ -1,0 +1,24 @@
+#slide 18 Task B
+#1st method
+n=input("Enter: ")
+b=n.split("/")
+for y in b:
+    print(y)
+    
+#2nd method
+n=input("Enter: ")
+say=0
+for x in range(len(n)):
+    if n[x]=="/":
+        say+=1
+while say>=1:
+    b=n.find("/")
+    a=n[:b]
+    n=n[b+1:]
+    print(a)
+    say-=1
+print(n)
+    
+
+    
+

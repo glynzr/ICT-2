@@ -1,0 +1,49 @@
+#slide 7 Task C
+n=input("Enter a sentence: ")
+for x in range(len(n)):
+    if n[x]!=" ":
+        n=n[x:]
+        break
+if n[-1]==" ": 
+    for y in range(-1,-len(n),-1):
+        if n[y]!=" ":
+            n=n[:y+1]
+            break
+
+b=n.split(" ")
+li=[]
+for z in b:
+    if z!="":
+        li+=[z]
+print(len(li))
+    
+
+
+len_li=[]
+for x in li:
+    len_li+=[len(x)]
+
+min_=len_li[0]
+for t in len_li:
+    if min_>t:
+        min_=t
+
+for i in li:
+    if len(i)==min_:
+        print(i,min_)
+
+max_=len_li[0]
+for m in len_li:
+    if max_<m:
+        max_=m
+
+for l in li:
+    if len(l)==max_:
+        print(l,max_)
+
+
+    
+        
+        
+        
+    

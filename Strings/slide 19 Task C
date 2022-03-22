@@ -10,7 +10,6 @@ for x in b:
 print(a)
 
 #2nd method
-#2nd method
 s1=input("Setri daxil edin: ")
 s2=input("Neyi evezleyirik: ")
 s3=input("Ne ile evezleyirik: ")
@@ -21,4 +20,17 @@ for x in b:
         x=s3
     a+=x
 print(a)
+
+#3rd method
+n=input("Setri daxil edin: ")
+a=input("Neyi evezleyirik: ")
+b=input("Ne ile evezleyirik: ")
+h=0
+ad=""
+for idx in range(len(n)):
+    if n[idx:idx+len(a)]==a:
+        ad+=(n[h:idx]+b)
+        h=idx+len(a)
+ad+=n[h:]
+print(ad)
 

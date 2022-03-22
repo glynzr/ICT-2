@@ -1,0 +1,9 @@
+#slide 20 Task A
+n1=input("n1=")
+n2=input("n2=")
+n3=input("n3=")
+sum_=int(n1)+int(n2)+int(n3)
+a=n1+"+"+n2+"+"+n3+"="
+print(a+str(sum_))
+print(a+"{}".format(sum_))
+print("{}+{}+{}={}".format(n1,n2,n3,sum_))

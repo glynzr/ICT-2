@@ -1,0 +1,14 @@
+#slide 21 Task A
+n=input("Ifadeni daxil edin: ")
+b=n.split("+")
+su=0
+for x in b:
+    if x!="+":
+        if "(" and ")" not in x:
+            su+=int(x)
+        else:
+            x=x[1:-1]
+            su+=int(x)
+print(su)
+        
+        

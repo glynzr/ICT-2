@@ -1,0 +1,34 @@
+#slide 21 Task B
+n=input("Ifadeni daxil edin: ")
+#1st method
+n1=""
+n2=""
+for idx in range(1,len(n)):
+    if n[idx]=="+" or n[idx]=="-":
+         n1+=n[:idx]
+         n=n[idx:]
+         break
+
+for x in range(1,len(n)):
+        if n[x]=="+" or n[x]=="-":
+         n2+=n[:x]
+         n=n[x:]
+         break
+sum_=int(n1)+int(n2)+int(n)
+print(sum_)
+
+
+#2nd method
+li=[]
+h=0
+for idx in range(1,len(n)):
+    if n[idx]=="-" or n[idx]=="+":
+        li+=[n[h:idx]]
+        h=idx
+li+=[n[h:]]
+sum_=0
+for el in li:
+    sum_+=int(el)
+print(sum_)
+
+

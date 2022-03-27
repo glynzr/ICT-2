@@ -1,0 +1,17 @@
+#488
+while True:
+    x=float(input("x= "))
+    if x not in range(2,61,2):
+        break
+i=1
+a=0
+while i<=59:
+    a+=(x-i)
+    i+=2
+y=2
+b=1
+while y<=60:
+    b*=(x-y)
+    y+=2
+c=a/b
+print(c)

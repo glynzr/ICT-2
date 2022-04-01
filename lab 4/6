@@ -1,0 +1,23 @@
+#6 Lab 4
+#1st method
+def countdigit(N):
+    if N>0:
+        a=len(str(N))
+    else:
+        a=len(str(N))-1
+    return a
+N=int(input("N= "))
+print(countdigit(N))
+
+
+#2nd method
+def countdigit(N):
+    N=abs(N)
+    a=0
+    while N>0:
+        a+=1
+        N//=10
+    return a
+N=int(input("N= "))
+print("The number of digits in {} is {}".format(N,countdigit(N)))
+print(countdigit(N))

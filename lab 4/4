@@ -1,0 +1,5 @@
+#4 Lab 4
+def f(n,k):
+    return k**2==n
+n,k=map(int,input("n,k= ").split(","))
+print(f(n,k))

@@ -1,0 +1,17 @@
+#1 Lab 4 Additional
+def f(li):
+    su=0
+    a="odd"
+    for x in li:
+        su+=x
+    if su%2==0:
+        a="even"
+    return a
+li=[]
+while True:
+    n=int(input("n= "))
+    if n==-1:
+        break
+    if n>0:
+        li+=[n]
+print("The sum of {} is ".format(li,sep=",")+f(li))

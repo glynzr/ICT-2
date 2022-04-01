@@ -1,0 +1,26 @@
+#8 Lab 4
+def isPrime(n):
+    flag=True
+    for i in range(2,n):
+        if n%i==0:
+            flag=False
+            break
+    return flag
+
+def Kempner(x):
+    a=isPrime(x)
+    if a==True:
+        b=x
+    else:
+        t=1
+        c=1
+        while True:
+            t*=c
+            c+=1
+            if t%x==0:
+                b=c-1
+                break
+    return b
+x=int(input("x= "))
+print("{}->{}!".format(x,Kempner(x)))
+

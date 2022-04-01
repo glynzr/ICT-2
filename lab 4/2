@@ -1,0 +1,8 @@
+#2 Lab 4 
+def f(a,b):
+    flag=False
+    if (a//b)%2==0:
+        flag=True
+    return flag
+a,b=map(int,input("a,b= ").split(","))
+print(f(a,b))

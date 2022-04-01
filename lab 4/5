@@ -1,0 +1,10 @@
+#5 Lab 4
+def isPronic(N):
+    flag=False
+    for x in range(1,N):
+        if x*(x+1)==N:
+            flag=True
+    return flag
+N=int(input("N= "))
+print("{} is Pronic number: ".format(N)+str(isPronic(N)))
+

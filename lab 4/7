@@ -1,0 +1,10 @@
+#7 Lab 4
+def isDisarium(N):
+    su=0
+    N=str(N)
+    for x in range(len(N)):
+        su+=int(N[x])**(x+1)
+    return su==int(N)
+N=int(input("N= "))
+print(isDisarium(N))
+        

@@ -1,0 +1,29 @@
+#9 Lab 4
+def isPrime(n):
+    flag=True
+    for i in range(2,n):
+        if n%i==0:
+            flag=False
+            break
+    return flag
+
+
+def isMoran(x):
+    y=x
+    su=0
+    b="non-Moran"
+    while x>0:
+        su+=(x%10)
+        x//=10
+    if y%su==0:
+        a=isPrime(int(y/su))
+        if a==True:
+            b="Moran"
+    return b
+t=int(input("t= "))
+print("{}->{}".format(t,isMoran(t)))
+
+
+
+
+

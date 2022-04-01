@@ -1,0 +1,25 @@
+#10 Lab 4
+def f(n,p):
+    b=n
+    li=[]
+    su=0
+    a="None"
+    while n>0:
+        li+=[n%10]
+        n//=10
+    li=li[::-1]
+    for x in range(len(li)):
+        su+=li[x]**(p+x)
+    if su%b==0:
+        a=int(su/b)
+    return a
+
+
+while True:
+    n,p=map(int,input("n,p= ").split(","))
+    if n>0 and p>0:
+        break
+c=n
+print("{},{}->{}".format(c,p,f(n,p)))
+
+

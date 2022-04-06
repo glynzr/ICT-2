@@ -1,0 +1,9 @@
+#slide 98 Task A
+import random
+N=int(input("N= "))
+A=[random.randint(0,100) for i in range(N)]
+total=0
+for x in A:
+    total+=x
+print(A)
+print("Average={:.3f}".format(total/N))

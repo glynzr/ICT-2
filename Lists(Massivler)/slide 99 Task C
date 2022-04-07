@@ -1,0 +1,11 @@
+#slide 99 Task C
+import random
+N=int(input("N= "))
+A=[]
+i=0
+while i<N:
+    x=random.randint(1,N)
+    if x not in A:
+        A+=[x]
+        i+=1
+print(A)

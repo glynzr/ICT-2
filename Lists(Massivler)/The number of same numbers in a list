@@ -1,0 +1,22 @@
+from random import randint
+N=int(input("N= "))
+li=[randint(1,10) for _ in range(N)]
+l=[]
+print(li)
+
+def f(i):
+    count=0
+    for a in li:
+        if i==a:
+            count+=1
+    return count
+
+
+for x in range(len(li)):
+    if li[x] in li[x+1:]:
+        if li[x] not in l:
+            l+=[li[x]]
+print(l)
+
+for i in l:
+    print(i,"->",f(i))

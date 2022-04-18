@@ -1,0 +1,12 @@
+#slide 67 Task C
+while True:
+    N=int(input("N= "))
+    if N>0:
+        break
+li=[0,1]
+su=1
+while (li[-1]+li[-2])<N:
+    li+=[li[-1]+li[-2]]
+    su+=li[-1]
+print(li)
+print(su)

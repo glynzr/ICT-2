@@ -1,0 +1,13 @@
+#slide 75 Task B
+def Armstrong(N):
+    su=0
+    for x in str(N):
+        su+=int(x)**len(str(N))
+    if su==N:
+        return True
+    else:
+        return False
+
+for  i in range(100,1000):
+    if Armstrong(i):
+        print(i,end=" ")

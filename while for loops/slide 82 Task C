@@ -1,0 +1,15 @@
+#slide 82 Task C
+while True:
+    N=int(input("N= "))
+    if N>0:
+        break
+
+l=[] 
+for x in range(1,N+1):
+    if "0" not in str(x):
+        li=[]
+        for i in str(x):
+            li+=[x%int(i)==0]
+        if False not in li:
+            l+=[x]
+print(*l) 

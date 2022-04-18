@@ -1,0 +1,14 @@
+#slide 66 Task A
+A,B=map(int,input("A,B= ").split(","))
+su=0
+x=0
+if A<0 and B<0 or A>0 and B>0:
+    while x<abs(A):
+        su+=abs(B)
+        x+=1
+elif A<0 and B>0 or A>0 and B<0:
+    while x<abs(A):
+        su+=abs(B)
+        x+=1
+    su=-su
+print(su)

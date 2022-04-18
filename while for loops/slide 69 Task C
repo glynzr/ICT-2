@@ -1,0 +1,13 @@
+#slide 69 Task C
+while True:
+    N=int(input("N= "))
+    if N>0:
+        break
+N=str(N)
+flag=False
+for x in range(len(N)):
+    if N[x] in N[x+1:]:
+        flag=True
+        break
+print("Yes" if flag==True else "No")
+    

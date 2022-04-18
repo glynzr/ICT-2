@@ -1,0 +1,4 @@
+#slide 74 Task A
+for x in range(10**5,10**6):
+    if x%133==125 and x%134==111:
+        print(x,end=" ")

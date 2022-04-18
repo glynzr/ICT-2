@@ -1,0 +1,10 @@
+#slide 75 Task C
+def Avtomorf(N):
+    if N==(N**2)%(10**(len(str(N)))):
+        return True
+    else:
+        return False
+A=int(input("A= "))
+for x in range(1,A+1):
+    if Avtomorf(x):
+        print(x,end=" ")

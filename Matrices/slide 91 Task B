@@ -1,0 +1,27 @@
+#slide 91 Task B
+from random import randint
+n=int(input("n= "))
+A=[]
+for x in range(n):
+    A+=[[randint(0,255) for _ in range(n)]]
+
+count=n**2
+su=0
+print("Before")
+for i in range(n):
+    for t in range(n):
+        su+=A[i][t]
+        print("{:3d}".format(A[i][t]),end=" ")
+    print()
+average=su/count
+print(average)
+
+print("After")
+for a in range(n):
+    for b in range(n):
+        if A[a][b]<average:
+            A[a][b]=0
+        else:
+            A[a][b]=255
+        print("{:3d}".format(A[a][b]),end=" ")
+    print()

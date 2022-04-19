@@ -1,0 +1,23 @@
+#slide 90 Task A
+from random import randint
+A=[]
+n=int(input("n= "))
+for x in range(n):
+    A+=[[randint(10,99) for _ in range(n)]]
+print(A)
+max_=A[0][0]
+a_max,b_max=0,0
+
+min_=A[0][0]
+a_min,b_min=0,0
+for i in range(n):
+    for t in range(n):
+        if A[i][t]>max_:
+            max_=A[i][t]
+            a_max,b_max=i,t
+        if A[i][t]<min_:
+             min_= A[i][t]
+             a_min,b_min=i,t
+
+print("Maksimal element:A[{},{}]={}".format(a_max,b_max,max_))
+print("Minimal element:A[{},{}]={}".format(a_min,b_min,min_))

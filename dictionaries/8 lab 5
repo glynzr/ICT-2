@@ -1,0 +1,12 @@
+#8 lab5
+users = { "maximus" : "password1", 
+ "asterix" : "password2", 
+ "starrex" : "password3" }
+
+n=input("Istifadeci adini daxil edin: ")
+m=input("Sifreni daxil edin: ")
+flag=False
+for x in users:
+    if n==x and m==users[x]:
+        flag=True
+print("Welcome,{}!".format(n) if flag==True else "Either username or password is incorrect")

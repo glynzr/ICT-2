@@ -18,5 +18,13 @@ a,b=f_(n1)
 c,d=f_(n2)
 re_a=a*c-b*d
 re_b=a*d+b*c
-print("({})*({})={}+{}i".format(n1,n2,re_a,re_b))
+if re_a!=0 and re_b!=0:
+    print("({})*({})={}+{}i".format(n1,n2,re_a,re_b))
+elif re_a!=0:
+    print("({})*({})={}".format(n1,n2,re_a))
+elif re_b!=0:
+    print("({})*({})={}i".format(n1,n2,re_b))
+else:
+    print("({})*({})=0".format(n1,n2))
+    
 

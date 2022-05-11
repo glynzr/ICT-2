@@ -1,0 +1,22 @@
+#math task
+def f_(x):
+    x1=""
+    x2=""
+    a=0
+    for i in range(len(x)):
+        if i!=0 and x[i]=="-" or i!=0 and x[i]=="+":
+            x1+=x[:i]
+            a=i
+    x=x[a:]
+    for j in range(len(x)):
+        if x[j]=="i":
+            x2+=x[:j]
+    return int(x1),int(x2)
+n1=input("n1= ")
+n2=input("n2= ")
+a,b=f_(n1)
+c,d=f_(n2)
+re_a=a*c-b*d
+re_b=a*d+b*c
+print("({})*({})={}+{}i".format(n1,n2,re_a,re_b))
+

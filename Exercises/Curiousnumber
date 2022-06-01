@@ -1,0 +1,19 @@
+#Digit factorials
+def factorial(n):
+    if n<=1: return 1
+    return n*factorial(n-1)
+
+def isCurious(n):
+    su=0
+    for i in str(n):
+        su+=factorial(int(i))
+    return su==n
+
+while True:
+    x=int(input("x= "))
+    if x>0:
+        break
+
+print(isCurious(x))
+    
+    

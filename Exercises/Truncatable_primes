@@ -1,0 +1,43 @@
+#Truncatable primes
+def isPrime(n):
+    if n==1: return False
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    return True
+
+def isLeft(n):
+    flag=True
+    while n>0:
+        if isPrime(n):
+            n//=10
+        else:
+            flag=False
+            break
+    return flag
+
+def isRight(n):
+    flag=True
+    while n>0:
+        if isPrime(n):
+            n%=10**(len(str(n))-1)
+            
+        else:
+            flag=False
+            break
+    return flag
+
+n=int(input())
+if isPrime(n):
+    if isLeft(n) and isRight(n):
+        print("Yes")
+    elif isLeft==False and isRight==False:
+        print("No")
+else:
+    print("No")
+        
+    
+    
+    
+
+            

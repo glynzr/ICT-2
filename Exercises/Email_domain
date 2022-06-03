@@ -1,0 +1,29 @@
+#email domain
+print("Enter your email adress: ")
+n=input()
+a=["!","#","$","%","\'","*","+","-","/","=","?","^","_","`",""]
+b=["\"","(",")",",",":",";","<",">","@","[","\\","]"]
+d=["gmail.com","mail.ru","yahoo.com"]
+if "@" not in n:
+    print("The \"@\" symbol is missing")
+else:
+    n=n.split("@")
+    flag=True
+    if n[1] in d:
+        if len(n[0])<=64:
+            if n[0][0] not in a and n[0][-1] not in a:
+                for i in n[0]:
+                    if i in b:
+                        flag=False
+                        break
+
+                print("Welcome" if flag else "Wrong email adress")
+            
+            else:
+                print("You should  not start/end with special characters")
+        else:
+            print("The recipient name may be\
+                    a maximum of 64 characters long")
+    else:
+        print("Wrong email domain")
+

@@ -1,0 +1,19 @@
+#Julius Caesar Cyfer (coding)
+A=["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o",
+   "p","q","r","s","t","u","v","w","x","y","z"]
+
+def cyfer(n,k):
+    global s
+    global a
+    if len(s)==len(a): return
+    for i in range(len(A)):
+        if A[i]==n[0]:
+            s+=A[(i+k)%26]
+    cyfer(n[1:],k)
+
+x=input()
+k=int(input())
+a=x
+s=""
+cyfer(x,k)
+print(s)

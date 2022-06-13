@@ -1,0 +1,28 @@
+#The cost of moving
+def qSort(li,s,e):
+    if s>=e:return
+    L=s;R=e
+    x=li[(L+R)//2]
+    while L<=R:
+        while li[L]<x:L+=1
+        while li[R]>x:R-=1
+        if L<=R:
+            li[L],li[R]=li[R],li[L]
+            L+=1;R-=1
+    qSort(li,s,R)
+    qSort(li,L,e)
+
+
+while True:
+    n=int(input())
+    if n==0:break
+    A=[input() for _ in range(n)]
+    B=A[:]
+    qSort(A,0,len(A)-1)
+    c=0
+    for i in range(len(A)):
+        for j in range(len(B)):
+            if A[i]==B[j]:
+                c+=abs(i-j)
+    print(c)
+    

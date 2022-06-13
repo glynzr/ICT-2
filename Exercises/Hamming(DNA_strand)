@@ -1,0 +1,23 @@
+n,m=map(str,input().split())
+A=["G","A","T","C"]
+flag_1=True
+flag_2=True
+for i in n:
+    if i not in A:
+        flag_1=False
+        break
+for i in m:
+    if i not in A:
+        flag_2=False
+        break
+c=0
+if flag_1 and flag_2:
+    if len(n)==len(m):
+        for i in range(len(n)):
+            if n[i]!=m[i]:
+                c+=1
+        print(c)
+    else:
+        print("Sequence length is different!")
+else:
+    print("This is not DNA strand")

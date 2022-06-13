@@ -1,0 +1,19 @@
+#sort the digit of numbers
+def bubble(li):
+    for i in range(len(li)-1):
+        for j in range(len(li)-2,i-1,-1):
+            if int(li[j+1])<int(li[j]):
+                li[j+1],li[j]=li[j],li[j+1]
+    return li
+a,b=map(int,input().split())
+A=[]
+for i in range(a,b+1):
+    A+=[bubble([*str(i)])]
+
+su=0
+for i in A:
+    s=""
+    for x in i:
+        s+=x
+    su+=int(s)
+print(su)

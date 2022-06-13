@@ -1,0 +1,28 @@
+#Anagrams
+n,m=map(str,input().split())
+A={}
+B={}
+for i in range(len(n)):
+    c=1
+    for j in range(i+1,len(n)):
+        if n[i]==n[j]:
+            c+=1
+    if n[i] not in A:
+        A[n[i]]=c
+
+flag=True
+if len(n)!=len(m):
+    flag=False
+else:
+    for i in range(len(m)):
+        c=1
+        for j in range(i+1,len(m)):
+            if m[i]==m[j]:
+                c+=1
+        if m[i] not in B:
+            B[m[i]]=c
+    a=(A==B)
+if flag:
+    print(a)
+else:
+    print(flag)

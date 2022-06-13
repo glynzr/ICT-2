@@ -1,0 +1,13 @@
+n=input("Enter a DNA strand:")
+A={"A":"U","T":"A","C":"G","G":"C"}
+s=""
+flag=True
+for i in n:
+    if i not in A:
+        flag=False
+        break
+    else:
+        s+=A[i]
+print(s if flag else "Incorrect DNA strand")
+        
+    

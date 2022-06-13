@@ -1,0 +1,17 @@
+#Number from digits
+def bubble(li):
+    for i in range(len(li)-1):
+        for j in range(len(li)-2,i-1,-1):
+            if li[j+1]<li[j]:
+                li[j+1],li[j]=li[j],li[j+1]
+    return li
+
+
+
+
+n=int(input())
+A=bubble([int(i) for i in str(n)])
+s=""
+for i in A:
+    s+=str(i)
+print(int(s)+int(s[::-1]))

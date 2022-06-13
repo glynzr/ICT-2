@@ -1,0 +1,18 @@
+#Collatz Conjecture
+def myFunc(n):
+    global A
+    if A[-1]==1:return
+    if n%2==0:
+        A+=[n//2]
+    else:
+        A+=[3*n+1]
+    myFunc(A[-1])
+        
+
+
+
+
+x=int(input())
+A=[x]
+myFunc(A[-1])
+print(len(A)-1)

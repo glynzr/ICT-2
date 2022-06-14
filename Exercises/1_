@@ -1,0 +1,39 @@
+from random import randint
+def countZero(n):
+    c=0
+    for i in str(n):
+        if i!="0":
+            c+=1
+    return c
+
+def sum_(n):
+    su=0
+    for i in str(n):
+        su+=int(i)
+    return su
+
+def selection(li,x,reverse):
+    for i in range(len(li)-1):
+        min_=i
+        for j in range(i+1,len(li)):
+            if x(li[min_])>x(li[j]):
+                min_=j
+        if min_!=i:
+            li[min_],li[i]=li[i],li[min_]
+    return li[::-1] if reverse else li
+
+
+
+
+
+"""while True:
+    n=int(input())
+    N=int(input())
+    if n>1:
+        break
+
+A=[randint(1,N) for _ in range(n)]"""
+A=[1001,11100,6514,9,22,124,350,12]
+print(A)
+print(selection(A[:len(A)//2],countZero,False)+\
+      selection(A[len(A)//2:],sum_,True))

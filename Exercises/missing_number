@@ -1,0 +1,8 @@
+#missing number
+n=int(input())
+A=[int(input()) for _ in range(n)]
+print(A)
+su=0
+for i in A:
+    su+=i
+print(n*(n+1)//2-su)

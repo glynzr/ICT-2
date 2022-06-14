@@ -1,0 +1,22 @@
+n,m=map(int,input().split())
+A=[[int(input()) for _ in range(m)] for _ in range(n)]
+B=[]
+for i in range(n):
+    min_=A[i][0]
+    a_min=0
+    for x in range(m):
+        if A[i][a_min]>A[i][x]:
+            min_=A[i][x]
+            a_min=x
+    max_=A[0][a_min]
+    a_max=0
+    for j in range(n):
+        if A[j][a_min]>max_:
+            max_=A[j][a_min]
+            a_max=j
+    if A[a_max][a_min]==A[i][a_min]:
+        B+=[A[i][a_min]]
+print(*B)
+        
+   
+    

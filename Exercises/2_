@@ -1,0 +1,43 @@
+from random import randint
+def qSort(li,s,e):
+    if s>=e:return
+    L=s;R=e
+    x=li[(L+R)//2]
+    while L<=R:
+        while li[L]<x:L+=1
+        while li[R]>x:R-=1
+        if L<=R:
+            li[L],li[R]=li[R],li[L]
+            L+=1;R-=1
+    qSort(li,s,R)
+    qSort(li,L,e)
+
+def bin_(li,n):
+    L=0;R=len(li)
+    while L<R-1:
+        c=(L+R)//2
+        if n<li[c]:
+            R=c
+        else:
+            L=c
+    if li[L]==n:
+        return f"{n} ededi tapildi"
+    else:
+        if n<li[0]:
+            return f"{n} ededi tapilmadi,en yaxin eded {li[0]}"
+        elif n>li[-1]:
+            return f"{n} ededi tapilmadi,en yaxin eded {li[-1]}"
+        else:
+            a=abs(li[L]-n)
+            b=abs(li[R]-n)
+            return f"{n} ededi tapilmadi,en yaxin eded {li[L]}"\
+                   if a<b else f"{n} ededi tapilmadi,en yaxin eded {li[R]}"
+
+A=[randint(10,99) for _ in range(20)]
+print("Massiv:")
+print(*A)
+x=int(input("Axtarilan eded:"))
+qSort(A,0,len(A)-1)
+print("Cesidlemeden sonra:")
+print(*A)
+print(bin_(A,x))

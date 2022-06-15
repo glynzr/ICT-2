@@ -1,0 +1,23 @@
+#matrix diagonal sum
+from random import randint
+while True:
+    n=int(input())
+    if n>1:
+        break
+A=[[randint(10,99)for _ in range(n)] for _ in range(n)]
+su=0
+print(A)
+for i in range(n):
+    su+=A[i][i]
+
+if n%2!=0:
+    for i in range(n):
+        if i!=n//2:
+            su+=A[i][n-1-i]
+else:
+    for i in range(n):
+        su+=A[i][n-1-i]
+print(su)
+
+
+

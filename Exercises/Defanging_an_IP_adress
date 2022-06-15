@@ -1,0 +1,10 @@
+#Defanging an IP adress
+n=input()
+s=""
+idx=0
+for i in range(len(n)):
+    if n[i]==".":
+        s+=n[idx:i]+"[.]"
+        idx=i+1
+s+=n[idx:]
+print(s)

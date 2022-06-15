@@ -1,0 +1,21 @@
+def myfunc(n):
+    if "-" in n:
+        c=0
+        for i in range(len(n)):
+            if n[i]=="-":
+                c+=1
+        if c==2:
+            n=n.split("-")
+            if len(n[0])==3 and len(n[1])==3 and len(n[2])==4:
+                return True
+        elif c==1:
+            n=n.split("-")
+            if len(n[1])==4 and len(n[0].split(" ")[1])==3 and \
+               len(n[0].split(" ")[0])==5 and "(" and ")" in \
+               n[0].split(" ")[0]:
+                return True
+    return False
+x=input()
+print(myfunc(x))
+
+

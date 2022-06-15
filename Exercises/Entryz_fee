@@ -1,0 +1,14 @@
+su=0
+while True:
+    n=input("Enter the age of guest(blank to quit):")
+    if n==" ":
+        print(f"The total for that group is ${su}")
+        break
+    if int(n)<=2:
+        su+=0
+    elif 3<=int(n)<=12:
+        su+=14
+    elif int(n)>=65:
+        su+=18
+    else:
+        su+=23

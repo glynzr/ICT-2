@@ -1,0 +1,31 @@
+#check if every row and every column contains all numbers
+while True:
+    n=int(input())
+    if n>1:
+        break
+
+A=[[int(input()) for _ in range(n)] for _ in range(n)]
+print(A)
+X=n*(n+1)//2
+flag_1=True
+for i in range(n):
+    su=0
+    for b in A[i]:
+        su+=b
+    if su!=X:
+        flag_1=False
+        break
+
+flag_2=True
+for i in range(n):
+    su=0
+    for j in range(n):
+        su+=A[j][i]
+    if su!=X:
+        flag_2=False
+        break
+
+if flag_1 and flag_2:
+    print(True)
+else:
+    print(False)

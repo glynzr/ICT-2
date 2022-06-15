@@ -1,0 +1,18 @@
+#cells with odd values in a matrix
+n,m=map(int,input().split())
+A=[[0]*m for _ in range(n)]
+B=[[int(input())for _ in range(2)] for _ in range(2)]
+
+for i in range(2):
+    for j in range(m):
+        A[B[i][0]][j]+=1
+    for j in range(n):
+        A[j][B[i][1]]+=1
+
+
+c=0
+for i in range(n):
+    for j in range(m):
+        if A[i][j]%2!=0:
+            c+=1
+print(c)
